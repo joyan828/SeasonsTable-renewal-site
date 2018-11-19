@@ -1,0 +1,57 @@
+/* main-common */
+h2{font-size: 30px; font-weight: 500; padding: 40px 0 30px 50px; color:#4A4240;}
+
+/* main banner */ 
+#main_banner{width: 100%; height: 640px; margin: 0 auto; position: relative; overflow: hidden;}
+#main_banner #banner_wrap{width: 300%; height: 100%; }
+.banner{ position: absolute; width: 100%;  height: 100%; }
+.banner:nth-child(1){background: url(../images/main/bannerimg01.jpg) no-repeat center; background-size: auto 100%; left:0;}/**/
+.banner:nth-child(2){background: url(../images/main/bannerimg02.jpg) no-repeat center; background-size: auto 100%; left: 100%;}/**/
+.banner:nth-child(3){background: url(../images/main/bannerimg03.jpg) no-repeat center; background-size: auto 100%; left: 100%;}/**/
+#main_banner .pager span{background-color:#fff; opacity: 0.8;}
+#main_banner .pager span:hover{opacity: 0.9;}
+#main_banner .pager span.selected{opacity: 0.9;}
+#main_banner #stop_btn{position: absolute; width: 38px; height: 38px; bottom: 30px; right: 271px; cursor: pointer; margin-right: 15px; overflow: hidden;}
+
+
+/* new_ad */
+#new_ad{width: 100%; height: 530px; background: url(../images/main/SUMMER%20EVENT03-3.jpg) center center no-repeat; background-size: cover; position: relative;}
+#new_ad>.wrap{height: 530px; position: relative;}
+#new_ad .see_btn{width: 327px; height: 60px; border-radius: 10px; line-height: 60px; text-align: center; font-size: 22px; display: inline-block; position: absolute; bottom: 90px; margin: 0 auto;}
+.see_btn img{margin-top: 21px; margin-left: 5px;}
+.see_btn a{display: block; color: #fff;}
+
+.see_btn:nth-child(1){background-color: #95551E; left: 240px;}
+.see_btn:nth-child(2){background-color: #7C3929; right: 240px;}
+
+/* season menu */
+#season_menu{background: #FAFAFA; width: 100%; height: 470px; position: relative;}
+
+#season_menu>.wrap{width: 1280px; height: 400px; overflow:hidden; position: relative; top: -470px;}
+#season_menu .container{width: 2249px; height: 100%;}
+.container .menu_slide{height: 100%; float: left; margin-right: 20px;}
+#season_menu .menu{width: 259px; height: 284px; border: 1px solid #707070; background: #fff; text-align: center; float: left;}
+#season_menu .menu+.menu{margin-left: 20px;}
+#season_menu .menu img{margin: 19px 32px 20px;}
+#season_menu .menu a{display: block;}
+#season_menu .menu .title{font-size: 17px; margin-bottom: 8px;}
+#season_menu .menu .contents{font-size: 14px; color: #707070; line-height: 20px;}
+
+#season_menu .arrows{width: 1400px; height: 470px; position: relative; top: 0; margin: 0 auto;}
+#season_menu .prev_btn{position: absolute; top: 220px; left: 0; cursor: pointer;}
+#season_menu .next_btn{position: absolute; top: 220px; right: 0; cursor: pointer;}
+#season_menu .pager span{background-color: #1a1a1a; opacity: 0.5;}
+#season_menu .pager span:hover{opacity: 0.7;}
+#season_menu .pager span.selected{opacity: 0.7;}
+
+/* sns */
+#sns{width: 100%; height: 970px; background: url(../images/bg_contArea.jpg) center center fixed;}/*추가*/
+#sns p{line-height: 39px; margin-left: 50px; margin-bottom: 40px;}
+#sns .box{width: 318px; height: 318px; float: left; border: 1px solid #E9DEC8; position: relative;}
+#sns .sns_ov{width: 318px; height: 318px; background: rgba(9,93,38,0.6); position: absolute; top: 0; left: 0; opacity: 0; transition: .3s opacity ease-in-out;}
+#sns .sns_ov:hover{opacity: 1;}
+#sns .sns_ov a{color: #fff;  font-size: 14px;}
+#sns .sns_ov p{margin: 43px 0 0 20px; line-height: 25px;}
+#sns .tags{display: inline-block; padding: 5px; border: 1px solid #fff; margin-top: 30px;}
+#sns .tags+tags{margin-right: 10px;}
+#sns .tags:nth-child(2){margin-left: 20px;}
