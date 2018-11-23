@@ -1,14 +1,9 @@
-<?  
- $name=$_REQUEST['name'];
- $id=$_REQUEST['id'];
-?>
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="utf-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">	
-	<title> 계절밥상 회원가입을 축하합니다!</title>
+	<title> 계절밥상 회원탈퇴</title>
     <link rel="shortcut icon" href="../images/favicon/favicon.ico">
 	<link rel="stylesheet" href="../css/common.css" />
 	<link rel="stylesheet" href="../css/join.css" />
@@ -30,10 +25,10 @@
     
     <!-- section -->
     <section class="bt230 welcome">
-        <h2>환영합니다!</h2>
-        <p><span><?=$_REQUEST['name']?>&nbsp;</span>님, 회원가입을 축하합니다.<br>
-        계절밥상의 새로운 아이디는 <span class="green"><?=$_REQUEST['id']?>&nbsp;</span>입니다.</p>
-        <div id="login_btn" class="btn"><a href="../login/login_form.php">로그인</a></div>
+        <h2>회원탈퇴</h2>
+        <p style='margin-top:20px;'><span class="green" >회원탈퇴가 정상적으로 완료되었습니다.</span><br>
+        계절밥상을 이용해 주셔서 감사합니다.</p>
+    
         <div id="main_btn" class="btn"><a href="../index.php">홈으로</a></div>
     </section>
     <!-- //section ending-->

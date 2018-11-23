@@ -1,4 +1,4 @@
-/*-----join_form.php-----*/
+/*-----join_form.php(member_form_modify.php, member_leave_fin.php 일부)-----*/
 /* section */
 section {width: 480px; height: auto; margin: 0 auto; font-weight: 500; color: #4A4240; margin-top: 110px;}
 section h2{display: inline-block; padding: 5px 0; font-size: 30px; font-weight: 400; border-bottom: 1px solid #1A1A1A; margin-bottom: 20px;}
@@ -6,20 +6,28 @@ section h2{display: inline-block; padding: 5px 0; font-size: 30px; font-weight: 
 /* content - 회원가입 폼(공통)*/
 section h3{font-size:20px; font-weight: 500; color: #666; margin: 30px 0 5px;}
 section .join_row{width: 480px;}
-section .txt_box{display: inline-block; width: 478px; height: 48px; border: 1px solid #ccc;}
-section input{width: 460px; height: 30px; line-height: 50px; border: 0; margin: 10px 10px; font-size: 14px;}
-select{border: none; background-color: #fff; font-size: 15px; color: #757575; background: url(../images/down_arrow.svg) no-repeat right center;
--webkit-appearance:none;/*화살표 없애기 for chrome*/
--moz-appearance:none; /*화살표 없애기 for firefox */
-appearance:none; /*화살표 없애기 공통 */};
-select::-ms-expand{display: none; /* 화살표 없애기 for IE10, 11 */}
+section .txt_box{display: inline-block; width: 478px; height: 48px; border: 1px solid #ccc; overflow:hidden;}
+
+
+section input{width: 460px; height: 30px; line-height: 30px; border: 0; margin: 10px 10px; font-size: 14px; overflow: hidden;}
+select{border: none; font-size: 14px; color: #757575; background: url('../images/down_arrow.svg') no-repeat 85% center; background-size: 36px 36px; 
+-webkit-appearance:none;/*style 없애기 for chrome*/
+-moz-appearance:none; /*style 없애기 for firefox */
+appearance:none; /*style 없애기 공통 */};
+::-ms-expand{display: none;}
+
+
+
+
 section .error_msg{display: none; color: #c61616; font-size: 14px; margin: 10px 0;}
 section .pass_msg{display: none; color: #095D26; font-size: 14px; margin: 10px 0;}
 
+.placeholdersjs{color: #666;} /* placeholder 적용 IE 9 이하 */
+
 /* content - 회원가입 폼(개별)*/
 /* 비밀번호 폼 */
-section #pwd{background: url('../images/unlocked.svg') no-repeat right; background-size: 28px;}
-section #pwdconfirm{background: url('../images/passwordChkyet.svg') no-repeat right; background-size: 28px;}
+section #pwd{background: url('../images/unlocked.svg') no-repeat right; background-size: 28px 28px;}
+section #pwdconfirm{background: url('../images/passwordChkyet.svg') no-repeat right; background-size: 28px 28px;}
 
 /* 생년월일 폼 */
 section .birth_wrap{width: 480px; height: 50px; position: relative;}
@@ -28,10 +36,10 @@ section .bir:nth-child(1){left: 0;}
 section .bir:nth-child(2){left: 167px;}
 section .bir:nth-child(3){left: 335px;}
 section .bir input{width: 123px;}
-select#bir_mm{width: 123px; height: 30px; margin: 10px; }
+select#bir_mm{width: 160px; height: 50px;}
 
 /* 성별 폼 */
-select#gender{width: 460px; height: 30px; margin: 10px; }
+select#gender{width: 500px; height: 50px; background-position: 95% 50%;}
 
 /* 휴대폰 번호 폼*/
 section .ph{width: 478px;}
@@ -41,21 +49,51 @@ section .ph input{width: 460px;}
 section .btn-primary{display: inline-block; width: 150px; height: 50px; background-color: #095D26; color: #fff; font-size: 14px; text-align: center; line-height: 50px; float: left; margin: 0;}
 section .address{margin-bottom: 5px;}
 section .address_btn{float: right;}
-section .address:nth-child(3){width: 328px; float: left;}
+section .address:nth-child(3){width: 325px; float: left;}
 section .address:nth-child(3) input {width: 310px;}
 
 
 /* 가입하기 버튼 */
-section #btnJoin{width: 480px; height: 80px; background-color: #095D26; cursor: pointer; color: #fff; font-size: 20px; margin-top: 90px;}
+section #btnJoin{width: 480px; height: 80px; background-color: #095D26; cursor: pointer; color: #fff; font-size: 20px; margin-top: 90px; border: 0; 
+-webkit-appearance:none;/* safari 기본 스타일 제거*/}
 
 
 /*-----join_success.php-----*/
 /* section */
-section#welcome{margin: 60px auto 230px; width: 1280px; padding: 60px 0; background-color: #fafafa; text-align: center;}
-#welcome h2{border-bottom: 0; margin-bottom: 20px;}
-#welcome p{line-height: 30px;}
-#welcome div.btn{width: 340px; height: 80px; display: inline-block; background-color: #4a4240; line-height: 80px; text-align: center; margin-top: 145px;}
+section.welcome{margin: 60px auto 230px; width: 1280px; padding: 60px 0; background-color: #fafafa; text-align: center;}
+.welcome h2{border-bottom: 0; margin-bottom: 30px;}
+.welcome p{line-height: 40px;}
+.welcome div.btn{width: 340px; height: 80px; display: inline-block; background-color: #4a4240; line-height: 80px; text-align: center; margin-top: 145px; border: 0;
+-webkit-appearance:none;/* safari 기본 스타일 제거*/}
 
 /* btn */
 div.btn+div.btn{margin-left: 10px;}
-#welcome div.btn a{display: block; color: #ccc;}
+.welcome div.btn a{display: block; color: #ccc;}
+
+/*-----member_form_modify------*/
+/* section */
+section#modify_wrap{padding: 50px 100px; border: 1px solid #ccc; background-color: #fafafa; margin-bottom: 10px;}
+section .txt_box{background-color: #fff;}
+
+span#id_box{line-height: 48px; text-indent: 10px; color: #095D26; }
+
+/* 변경, 취소 버튼 */
+section .btn{width: 234px; height: 60px; background-color: #4A4240; cursor: pointer; color: #fff; font-size: 20px; margin: 50px 0; border: 0; 
+-webkit-appearance:none;/* safari 기본 스타일 제거*/}
+section #btnStop{background-color: #4A4240; margin-left: 5px;}
+
+/* 회원탈퇴 */
+.deleteid{width: 680px; padding: 5px 0; margin: 0 auto; font-size: 14px; color: #666;}
+#goDelete{font-weight: bold; text-decoration: underline; cursor: pointer; display: inline-block; margin-bottom: 230px;}
+
+.del_info{display: none; width: 480px; padding: 50px 100px; margin: 0 auto 230px; font-size: 14px; color: #666; border: 1px solid #ccc; background-color: #fafafa; line-height: 30px;}
+.del_info h3{font-size: 20px; margin-bottom: 30px;}
+.del_info p:nth-child(2){margin-bottom: 20px;}
+.del_info b:nth-child(5){display: inline-block; margin-top: 20px; color: #1A1A1A;}
+.del_info label{cursor: pointer;}
+.del_info #delbtn{width: 150px; height: 50px; background-color: #095D26; cursor: pointer; color: #fff; font-size: 14px; margin: 50px 0; line-height: 50px; text-align: center; border: 0; 
+-webkit-appearance:none;/* safari 기본 스타일 제거*/}
+
+
+/*----- member_leave_fin.php ------*/
+section .small{font-size: 14px;}

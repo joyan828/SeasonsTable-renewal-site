@@ -1,25 +1,24 @@
 @charset "utf-8"; 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');/* Noto sans 폰트*/
 *{margin:0; padding:0;} 
 li{list-style: none;} 
 a{text-decoration: none; outline:0; color:#1A1A1A;} 
 img{border:0; vertical-align: top;}
-@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
-@import url('//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+
+
 
 /* common */
-body{font:20px 'Noto Sans KR', sans-serif; font-weight:400;'Iropke Batang' color:#1A1A1A; letter-spacing: -0.8px;}
+body{font: 20px 'Noto Sans KR', sans-serif; font-weight:400; color:#1A1A1A; letter-spacing: -0.8px;}
 
 .wrap{width: 1280px; margin: 0 auto;}
-.blind{position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rec(1px, 1px, 1px, 1px);}
+.blind{position: absolute; height: 1px; width: 1px; overflow: hidden;}
 fieldset{border: none;}
 
 /* style */
 .bt230{margin-bottom: 230px;}
-.shadow{box-shadow: 3px 3px 7px rgba(30,30,30,0.2);
-    box-shadow: -webkit-3px 3px 7px rgba(30,30,30,0.2); /*chrome: 4.0, safari: 3.1*/
-    box-shadow: -ms-3px 3px 7px rgba(30,30,30,0.2); /*ie: 9.0*/
-    box-shadow: -o-3px 3px 7px rgba(30,30,30,0.2); /*opera: 10.5*/
-    box-shadow: -moz-3px 3px 7px rgba(30,30,30,0.2); /*firefox: 3.5*/
+.shadow{
+    -webkit-box-shadow: 3px 3px 7px rgba(30,30,30,0.2); 
+    box-shadow: 3px 3px 7px rgba(30,30,30,0.2);
 }
 /* txt style*/
 .bold{font-weight: bold;}
@@ -60,7 +59,7 @@ header #gnb{width: 100%; height: 70px; background: url(../images/gnb_bg.gif);}
 #gnb h1{width: 221px; height: 70px; float: left; overflow: hidden;}
 #gnb h1 img{width: 100%;}
 #gnb .main_menu{font-family: 'Iropke Batang'; font-size: 21px; float: left; margin-left: 20px;}
-#gnb .main_menu>li{float: left; padding: 0 30px; line-height: 70px; ;}
+#gnb .main_menu>li{float: left; padding: 0 35px; line-height: 70px;}
 #gnb .main_menu a{display: block;}
 #gnb .main_menu>li>a{color: #4A4240; transition: .2s color ease-in-out; }
 #gnb .main_menu li:hover>a{color:#095D26;}
@@ -68,17 +67,17 @@ header #gnb{width: 100%; height: 70px; background: url(../images/gnb_bg.gif);}
 #gnb .gnb_right li{float: left; width: 25px; padding: 0 20px; margin-top: 22px;}
 #gnb .gnb_right img{width: 100%;}
 
-#gnb .sub{height: 290px; font:17px 'Noto Sans KR'; position: absolute; z-index: 2; display: none;}
-#gnb .sub li{margin-top: 30px;}
+#gnb .sub{height: 290px; margin-top: 10px; font-size:17px; font-family: 'Noto Sans KR', sans-serif; position: absolute; z-index: 2; display: none;}
+#gnb .sub li{padding: 30px 40px; margin-left: -40px; line-height: 0px;}
 
 #gnb .sub li:hover a{text-decoration: underline;}
-#submenu_bg{width: 100%; height: 320px; background: #fff; position:absolute; top: 110px; z-index: 1; display: none;}
+#submenu_bg{width: 100%; height: 300px; background: #fff; position:absolute; top: 110px; z-index: 1; display: none;}
 
 
 
 
 /* top btn */
-.top_btn{width: 60px; height: 60px; border-radius: 60px; background-color: #1a1a1a; position: fixed; right: 50px; bottom: 200px; opacity: 0.5;}
+.top_btn{width: 60px; height: 60px; border-radius: 60px; background-color: #1a1a1a; position: fixed; right: 50px; bottom: 200px; opacity: 0.5; z-index: 3; display: none;}
 .top_btn img{margin: 15px;}
 .top_btn a{display: block;}
 
@@ -89,8 +88,8 @@ footer a, footer p{color: #fff;}
 .footer_info{width: 100%; height: 290px; background: url(../images/footer/footer_bg.jpg); position: relative;}
 .footer_info img{width: 115px; float: left; margin-top: 36px;}
 
-footer ol{overflow: hidden;}
-footer ol li{display: inline-block; width: 75px; height: 51px; padding: 5px 10px;}
+footer ol{overflow: hidden; width: 1150px; margin: 0 auto;}
+footer ol li{float: left; width: 75px; height: 51px; padding: 5px 10px;}
 footer ol img{width: 100%; height: 100%;}
 #vips img {width: 75%; height: auto; margin-top: -9px;}
 #bibigo img, #thePlace img{width: 80%; height: auto; margin-top: -5px;}
@@ -105,3 +104,11 @@ footer ul .bold{color: #E8EAD9;}
 .footer_info p{font-size: 14px; display: inline-block; color: #B8B3AD;}
 .footer_info .footer_rows{margin-bottom: 15px;}
 .footer_info .footer_rows p+p{margin-left: 20px;}
+
+
+
+
+/* ~1620px */
+@media only screen and (max-width:1620px) {
+    .top_btn{right: 20px;}
+}

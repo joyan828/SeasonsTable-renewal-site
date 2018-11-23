@@ -1,4 +1,4 @@
-<meta charset="utf-8" />
+
 
 <? 
     session_start(); 
@@ -12,25 +12,18 @@
     $result = mysql_query($sql, $connect);
     $num_match = mysql_num_rows($result);
 
-    if(!$num_match){
-        echo("
-            <script>
-                window.alert('아이디 또는 비밀번호가 없습니다.');
-                history.go(-1);
-            </script>
-        ");
+    if(!$num_match){ //로그인 아이디가 없을 떄
+        echo("0");
+    }else{ 
+        echo("1"); //로그인 성공
     }
     
     $row = mysql_fetch_array($result);
 
     $_SESSION['userid'] = $row['id'];
-    $_SESSION['username'] = $row['name'];
+    $_SESSION['username'] = $row['name']; 
     
-    echo("
-        <script>
-            location.href='../index.php';
-        </script>
-    ");
+   
 
     mysql_close();
 ?>

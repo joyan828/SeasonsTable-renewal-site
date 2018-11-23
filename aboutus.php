@@ -1,27 +1,33 @@
+<? session_start(); ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="utf-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">	
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">	
 	<title> 계절밥상 소개 </title>
     <link rel="shortcut icon" href="./images/favicon/favicon.ico">
 	<link rel="stylesheet" href="css/common.css" />
 	<link rel="stylesheet" href="css/aboutus.css" />
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">	
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/prefixfree.min.js"></script>
-	<script type="text/javascript" src="js/common.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/prefixfree.min.js"></script>
+	<script src="js/common.js"></script>
     <script>
+        //해시체인지 이벤트 -------------------------------------*
+        //탭 메뉴로 접속할 때 해시를 달아주어 내용을 변경함
         //해시 변경 시 실행
         $(window).on('hashchange',function(){
-           goToFromHash(); 
+            goToFromHash(); 
+            ban_ani();    
         });
       
        //윈도우 모두 로드 되었을 때 실행 
         $(window).on('load',function(){
-            goToFromHash();   
+            goToFromHash();
+            ban_ani();
+            
         });
         
         //해시에 따라 해당 페이지로 이동하는 함수
@@ -30,26 +36,41 @@
             if(hash==="#st_story"){
                 change(0); $('#ban_img').attr('src','./images/about_us_banner.png');
                 $('html,body').scrollTop(0);
-//                $('html,body').animate({scrollTop:0},200, 'easeInSine');
+                
                 return;
             }else if(hash==="#st_intro"){
                 change(1); $('#ban_img').attr('src','./images/about_us_banner02.jpg');
                 $('html,body').scrollTop(0);
-//                $('html,body').animate({scrollTop:0},200, 'easeInSine');
+                
                 return;
             };
+            
             function change(n){//해당 탭에 클래스 추가
                 $('.tab li').removeClass('on');
                 $('.tabcontent').removeClass('on');
                 $('.tab li').eq(n).addClass('on');
                 $(hash).addClass('on');
             };
+            
+            
+            
         };
-        
-        //탭을 클릭했을 때 goToFromHash()함수 실행
-//        $('.tab li').click(function(){
-////            goToFromHash();
-//        });
+
+        //배너 애니메이션 -------------------------------*
+        function ban_ani(){
+            //setting
+            $('#ban_img').css({width:2120, marginLeft:-100, opacity:0});
+            $('.ban_logo').css({top:330, opacity:0});
+            $('#about_banner p').css({top:450, opacity:0});
+            
+            //animation
+            $('#ban_img').animate({width:1920, marginLeft:0, opacity:1},500, function(){
+                $('.ban_logo').animate({top:380, opacity:1},300, function(){
+                    $('#about_banner p').animate({top:500, opacity:1},300);
+                });
+            });
+        };
+
     </script>
 </head>
 

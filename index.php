@@ -3,18 +3,22 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">	
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">	
 	<title> 계절밥상 </title>
     <link rel="shortcut icon" href="./images/favicon/favicon.ico">
-	<link rel="stylesheet" href="css/common.css" />
-	<link rel="stylesheet" href="css/main_css.css" />
+	<link rel="stylesheet" href="./css/common.css" />
+	<link rel="stylesheet" href="./css/main_css.css" />
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">	
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/prefixfree.min.js"></script>
-	<script type="text/javascript" src="js/common.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+    <!-- jQUery load -->
+	<script src="./js/jquery-2.1.1.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/jquery.easing.1.3.js"></script>
+	<script src="./js/prefixfree.min.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/main.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../js/trasition-animation.js"></script>
+    <![endif]-->
 </head>
 
 <body>
@@ -28,10 +32,20 @@
     <div id="main_banner">
         <div id="banner_wrap">
             <div class="banner">
+                <span class="blind">
+                    입맛당기는 여름 별미 삼총사 이른 여름 지금, 절정의 맛. 시원한 수박과 탱글한 젤리의 만남! 여름 수박화채. 살얼음 동동 새콤하고 시원한 여름 초계국수. 초계국수와 환상의 짝궁 매콤 닭무침
+                </span>
             </div>
             <div class="banner">
+                <span class="blind">
+                    지금 절정의 맛. 총알 불오징어구이. 일년 중 여름과 겨울 단 2번 맛볼 수 있는 별미. 부드러운 식감과 불맛이 일품인 총알 오징어를 지금 계절밥상에서 만나보세요. 신메뉴. *일부 메뉴 및 식재는 조기 소진 또는 변경될 수 있습니다.
+                </span>
             </div>
             <div class="banner">
+                <span class="blind">
+                    이른 무더위 처방전. 살얼음 동동 초계국수. 매콤 닭 무침. 여름 초계국수. 여름 수박화채. 
+                    *일부 메뉴 및 식재는 조기 소진 또는 변경될 수 있습니다.
+                </span>
             </div>
         </div>
         <div class="pager"></div>
@@ -44,6 +58,13 @@
     <!--  new_ad  -->
     <div id="new_ad">
         <div class="wrap">
+            <!--   image sources   -->
+            <img src="./images/main/SUMMER-EVENT03-3_0002_title.png" alt="전복능이삼계탕과 장어간장덮밥" id="evt_title">
+            <img src="./images/main/SUMMER-EVENT03-3_0003_eel_pic.png" alt="장어간장덮밥" id="eel_pic">
+            <img src="./images/main/SUMMER-EVENT03-3_0001_eel_txt.png" alt="달콤짭조롬하게 즐기는 원기회복 보양식" id="eel_txt">
+            <img src="./images/main/SUMMER-EVENT03-3_0004_samgye_pic.png" alt="전복능이삼계탕" id="samgye_pic">
+            <img src="./images/main/SUMMER-EVENT03-3_0000_samgye_txt.png" alt="완도 전복과 능이버섯으로 감칠맛과 풍미 가득" id="samgye_txt">
+            <!--   btn    -->
             <div class="see_btn shadow"><a href="#">여름 메뉴 자세히 보기<img src="./images/main/next_btn02.gif" alt="계절밥상 여름메뉴 자세히 보기"></a></div>
             <div class="see_btn shadow"><a href="#">투표하고 선물 받기<img src="./images/main/next_btn02.gif" alt="계절밥상 여름메뉴 자세히 보기"></a></div>
         </div>    
@@ -52,8 +73,8 @@
     <!-- season menu -->
     <div id="season_menu">
         <div class="arrows">
-            <div class="prev_btn"><img src="./images/main/prev_btn.gif" alt="이전 메뉴 보기"></div>
-            <div class="next_btn"><img src="./images/main/next_btn.gif" alt="다음 메뉴 보기"></div>
+            <div class="prev_btn"><img src="./images/main/prev_btn-atv.png" alt="이전 메뉴 보기"></div>
+            <div class="next_btn"><img src="./images/main/next_btn-atv.png" alt="다음 메뉴 보기"></div>
         </div>
         <div class="wrap">
             <h2>제철메뉴</h2>

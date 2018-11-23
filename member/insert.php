@@ -11,11 +11,6 @@
     $birthday=$bir_yy."/".$bir_mm."/".$bir_dd;
 
     $gender=$_POST['gender'];
-    if($gender==='0'){
-        $gender='F';
-    }else{
-        $gender='M';
-    };
 
     $email=$_POST['email'];
     $hp=$_POST['phone'];
@@ -23,7 +18,7 @@
     $post=$_POST['post'];
     $address1=$_POST['Address'];
     $address2=$_POST['Address2'];
-    $address="(".$post.")".$address1.$address2;
+    $address=$post."|".$address1."|".$address2;
     
     $regist_day=date("Y-m-d (H:i)");
     $promo_ok=$_POST['promo_ok'];

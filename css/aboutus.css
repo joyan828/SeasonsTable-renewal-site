@@ -1,14 +1,14 @@
 
 
 /* banner */
-#about_banner{clear: both; width: 100%; height: 860px; position:relative; text-align: center; overflow: hidden;} 
-#banner_img>img:first-child{width: 1920px; }
-.ban_logo{width: 370px; position: absolute; top: 380px; left: 50%; margin-left: -185px;}
-#about_banner p{position: absolute; top: 500px; left: 50%; margin-left: -208px; font-size: 30px; color: #fff; line-height: 50px; text-align: center;}
+#about_banner{clear: both; margin: 0 auto; width: 1920px; height: 860px; position:relative; text-align: center; overflow: hidden; } 
+#banner_img>img:first-child{height: 110%; opacity:0; margin-left: -100px; }
+.ban_logo{width: 370px; position: absolute; top: 330px; left: 50%; margin-left: -185px; opacity: 0;}
+#about_banner p{position: absolute; top: 450px; left: 50%; margin-left: -208px; font-size: 30px; color: #fff; line-height: 50px; text-align: center; opacity: 0;}
 
 /* tab menu */
 .tab{position: absolute; bottom: 0; left: 50%; margin-left: -550px;}
-.tablinks{display: inline-block; width: 550px; height: 100px; font:30px 'Noto Sans CJK KR Medium';  border: none; cursor: pointer; line-height: 100px; background: #1A1A1A; opacity: 0.75; transition: .2s all ease-in-out;}
+.tablinks{display: inline-block; width: 550px; height: 100px; font:30px 'Noto Sans CJK KR Medium', sans-serif;  border: none; cursor: pointer; line-height: 100px; background: #1A1A1A; opacity: 0.75; transition: .2s all ease-in-out;}
 .tablinks:nth-child(2){margin-left: -6px;}
 .tablinks a{display: block; color: #fff; transition: .2s all ease-in-out;}
 .tab .on{background: #E8EAD9; opacity: 1;}
@@ -85,11 +85,53 @@ section.on{display: block;} /* on 상태에서만 보이기 */
 
 /* move btn */
 .move_btn{width: 403px; height: 80px; margin: 200px auto 0; background: #E8EAD9; border-radius: 7px; text-align: center; line-height: 80px; font-family: 'Noto Sans CJK KR Medium'; font-size: 22px;
-box-shadow: 2px 5px 7px #666; 
-box-shadow: -webkit-2px 5px 7px #666; 
-box-shadow: -ms-2px 5px 7px #666; 
-box-shadow: -moz-2px 5px 7px #666; 
-box-shadow: -o-2px 5px 7px #666; 
+-webkit-box-shadow: 2px 5px 7px #666; 
+-moz-box-shadow: 2px 5px 7px #666; 
+box-shadow: 2px 5px 7px #666;
 }
 .move_btn img{width: 23px; margin-top: 26px; margin-left: 10px;}
 .move_btn a{display: block;}
+
+
+
+/* 미디어쿼리 --------------------*/
+
+/* ~1920px */
+@media only screen and (max-width:1920px) {
+#about_banner{width: 100%;}
+
+.tabcontent{width: 100%; }
+.tabcontent .story{margin-bottom: 110px;} 
+
+#st_story #us_pt1-2{width: 100%; overflow: hidden;}
+#st_story #us_pt1-2 img{width: 100%; height: 100%;}
+#st_story #us_pt1-5 {margin-bottom: 350px;}
+#st_story #us_pt1-5 img{width: 100%; height: auto;}
+
+/* st_intro */
+.tabcontent h2.our_title{margin-left: 130px;}
+#st_intro #us_pt2-3 h3:nth-child(2){left: 280px;}
+#st_intro #us_pt2-3 p:nth-child(3){left: 280px;}
+#st_intro #us_pt2-3 h3:nth-child(4){left: 820px;}
+#st_intro #us_pt2-3 p:nth-child(5){left: 820px;}
+    
+}
+
+/* ~1640px */
+@media only screen and (max-width:1640px) {
+ 
+
+}
+
+
+/* ~1440px */
+@media only screen and (max-width:1440px) {
+    .tabcontent h2.our_title{margin-left: 130px;}
+      .tabcontent h2.our_title{margin-left: 130px;}
+#st_intro #us_pt2-3 h3:nth-child(2){left: 180px;}
+#st_intro #us_pt2-3 p:nth-child(3){left: 180px;}
+#st_intro #us_pt2-3 h3:nth-child(4){left: 720px;}
+#st_intro #us_pt2-3 p:nth-child(5){left: 720px;}
+}
+
+

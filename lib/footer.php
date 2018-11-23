@@ -5,8 +5,7 @@
 " target="blank"><img src="./images/footer/logo_family2.png" alt="뚜레쥬르 사이트(새창)"></a></li>
                 <li id="vips"><a href="https://www.ivips.co.kr:7002/intro/180628/intro.asp
 " target="blank"><img src="./images/footer/logo_family3.png" alt="빕스 사이트(새창)"></a></li>
-                <li id="bibigo"><a href="http://www.bibigo.com/kr
-/" target="blank"><img src="./images/footer/logo_family5.png" alt="비비고 사이트(새창)"></a></li>
+                <li id="bibigo"><a href="http://www.bibigo.com/kr" target="blank"><img src="./images/footer/logo_family5.png" alt="비비고 사이트(새창)"></a></li>
                 <li id="thePlace"><a href="https://www.italiantheplace.co.kr:7022/" target="blank"><img src="./images/footer/logo_family10.png" alt="더 플레이스 사이트(새창)"></a></li>
                 <li id="jemyunso"><a href="
 https://www.cheiljemyunso.co.kr:7014/main.asp
